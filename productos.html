@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo | Tienda de Ropa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- MENÚ -->
+   <header>
+    <nav class="nav-bar">
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+
+        <!-- CARRITO ARRIBA A LA DERECHA -->
+        <div class="carrito-top">
+            <span>🛒</span>
+            <span id="total">0 €</span>
+        </div>
+    </nav>
+</header>
+
+    <!-- CATÁLOGO -->
+    <section>
+        <h2>Catálogo de Productos</h2>
+
+        <div class="productos">
+
+            <div class="producto">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.cSErv-qGBO7hYuseZSiY0AHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Camiseta">
+                <h3>Camiseta Básica</h3>
+                <p>15 €</p>
+                <button class="btn-comprar" onclick="agregarAlCarrito('Camiseta Básica', 15)">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://www.masproteccionlaboral.com/3328-medium_default/sudadera-unisex-con-capucha-sidney-mk605v.jpg" alt="Sudadera">
+                <h3>Sudadera</h3>
+                <p>30 €</p>
+                <button class="btn-comprar" onclick="agregarAlCarrito('Sudadera', 30)">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://s3.ppllstatics.com/mujerhoy/www/multimedia/202503/25/media/cortadas/chaqueta-cuero-zara-kMyB--650x900@MujerHoy.jpg" alt="Chaqueta">
+                <h3>Chaqueta</h3>
+                <p>45 €</p>
+                <button class="btn-comprar" onclick="agregarAlCarrito('Chaqueta', 45)">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://th.bing.com/th/id/R.fb509b4c442d81ea31522b9ab03a0b56?rik=MYUY9C8YjqstUQ&pid=ImgRaw&r=0" alt="Pantalón">
+                <h3>Pantalón Jeans</h3>
+                <p>35 €</p>
+                <button class="btn-comprar" onclick="agregarAlCarrito('Pantalón Jeans', 35)">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.-MILPC_ExPONQfoOwFcs0wHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Vestido">
+                <h3>Vestido</h3>
+                <p>40 €</p>
+                <button class="btn-comprar" onclick="agregarAlCarrito('Vestido', 40)">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.c9jDKwraUOSF3pkV9h0WFwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Camisa">
+                <h3>Camisa Formal</h3>
+                <p>28 €</p>
+                <button class="btn-comprar" onclick="agregarAlCarrito('Camisa Formal', 28)">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.O8LaDSgrc2agLmjtohDftAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Short">
+                <h3>Short</h3>
+                <p>18 €</p>
+                <button class="btn-comprar" onclick="agregarAlCarrito('Short', 18)">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://graziamagazine.com/es/wp-content/uploads/sites/12/2024/12/5-e1733315378373.jpg" alt="Abrigo">
+                <h3>Abrigo</h3>
+                <p>60 €</p>
+                <button class="btn-comprar" onclick="agregarAlCarrito('Abrigo', 60)">Comprar</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CARRITO -->
+    <section class="carrito">
+    <h2>Carrito de Compras</h2>
+    <ul id="lista-carrito"></ul>
+    <button class="btn-vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+</section>
+
+</div>
+
+<script src="carrito.js"></script>
+</body>
+</html>

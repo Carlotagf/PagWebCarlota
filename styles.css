@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    width: 100%;
+    background-color:  rgb(0, 0, 0);
+}
+
+
+
+/* Barra de navegación más alta */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;   /* ⬅️ MÁS ALTA Y MÁS ANCHA */
+}
+
+/* Menú */
+.menu li a {
+    font-size: 18px;      /* ⬅️ texto un poco más grande */
+    padding: 10px 15px;   /* ⬅️ más espacio alrededor */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    background-color: #222;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #f0a500;
+    color: black;
+    border-radius: 5px;
+}
+
+section {
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.producto {
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.producto h3 {
+    margin: 10px 0 5px;
+}
+
+.producto p {
+    font-weight: bold;
+    color: #f0a500;
+    font-size: 18px;
+}
+
+.formulario {
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.formulario button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btn-comprar {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-comprar:hover {
+    background-color: #f0a500;
+}
+
+.carrito {
+    margin: 40px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+#lista-carrito li {
+    margin: 5px 0;
+}
+
+.btn-vaciar {
+    padding: 10px;
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-vaciar:hover {
+    background-color: #e74c3c;
+}
+
+
+
+.carrito-top {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.carrito-top span {
+    margin-left: 5px;
+}
+
+.oferta {
+    margin: 40px auto;          /* Centra horizontalmente con margen automático */
+    background-color: #f0a500;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    max-width: 400px;           /* Ancho máximo para que no sea tan ancho */
+    text-align: center;         /* Centrar texto dentro del cuadro */
+}
+
+.inicio, .sobre-nosotros {
+    padding: 40px 80px;
+    text-align: center;
+}
+
+.sobre-nosotros {
+    background-color: #f9f9f9;   /* Fondo suave */
+    padding: 80px 60px;          /* Mucho espacio arriba y abajo */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.sobre-nosotros .contenido {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sobre-nosotros h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.sobre-nosotros .introduccion {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+.mision-vision {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.bloque {
+    flex: 1 1 45%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.bloque h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f0a500;
+}
+
+.bloque p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.equipo, .contacto-nosotros {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.equipo h2, .contacto-nosotros h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f0a500;
+}
+
+.equipo p, .contacto-nosotros p {
+    font-size: 16px;
+    line-height: 1.6;
+}
