@@ -31,11 +31,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><a href="nosotros.html">Sobre Nosotros</a></li>
         </ul>
 
-        <!-- CARRITO ARRIBA A LA DERECHA -->
-        <div class="carrito-top">
-            <span>🛒</span>
-            <span id="total">0 €</span>
-        </div>
+       <div class="carrito-top" id="carrito-top">
+    <span>🛒</span>
+    <span id="total">0 €</span>
+    <span class="flecha" id="flecha-carrito">▼</span>
+
+    <!-- Mini carrito desplegable -->
+    <div class="mini-carrito" id="mini-carrito">
+        <ul id="lista-carrito"></ul>
+        <button class="btn-vaciar" id="vaciar-carrito-btn">Vaciar Carrito</button>
+    </div>
+</div>
+
     </nav>
 </header>
 
@@ -55,3 +62,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 
 </html>
+
