@@ -267,4 +267,25 @@ section {
 .equipo p, .contacto-nosotros p {
     font-size: 16px;
     line-height: 1.6;
+
+}
+
+.mini-carrito ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mini-carrito ul li button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.mini-carrito ul li button:hover {
+    background-color: #c0392b;
 }
