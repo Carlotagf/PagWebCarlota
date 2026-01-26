@@ -270,22 +270,45 @@ section {
 
 }
 
-.mini-carrito ul li {
+/* Mini-carrito */
+.mini-carrito {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 250px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.mini-carrito ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.mini-carrito li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 5px;
 }
 
-.mini-carrito ul li button {
-    background-color: #e74c3c;
-    color: white;
+.mini-carrito li button {
+    background: none;
     border: none;
-    border-radius: 5px;
-    padding: 2px 6px;
+    color: red;
     cursor: pointer;
-    font-size: 12px;
 }
 
-.mini-carrito ul li button:hover {
-    background-color: #c0392b;
+.flecha {
+    margin-left: 5px;
+    cursor: pointer;
 }
+
