@@ -270,45 +270,48 @@ section {
 
 }
 
-/* Mini-carrito */
-.mini-carrito {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    width: 250px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    z-index: 100;
-}
-
-.mini-carrito ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.mini-carrito li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-.mini-carrito li button {
-    background: none;
-    border: none;
-    color: red;
+.carrito-top {
+    color: white;
+    font-weight: bold;
     cursor: pointer;
+    position: relative; /* necesario para el desplegable */
 }
 
 .flecha {
     margin-left: 5px;
     cursor: pointer;
+    color: #f0a500; /* color visible */
 }
+
+#carrito-desplegable {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+    width: 220px;
+}
+
+#carrito-desplegable li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+#carrito-desplegable button {
+    background: #c0392b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
 
