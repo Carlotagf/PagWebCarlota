@@ -314,6 +314,20 @@ section {
     padding: 2px 5px;
 }
 
+/* Hacer que todo el fondo use una imagen que cubre toda la pantalla */
+html, body {
+  margin: 0; /* elimina los márgenes por defecto */
+  height: 100%;
+}
+
+body {
+  background-image: url('https://es.dreamstime.com/stock-de-ilustraci%C3%B3n-textura-incons%C3%BAtil-de-la-ropa-fondo-para-la-tienda-image62505760'); /* Cambia por la URL de tu imagen */
+  background-repeat: no-repeat; /* evita que se repita */
+  background-position: center center; /* centra la imagen */
+  background-size: cover; /* hace que cubra toda la pantalla */
+}
+
+
 
 
 
