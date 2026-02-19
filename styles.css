@@ -313,5 +313,37 @@ section {
     font-size: 12px;
     padding: 2px 5px;
 }
+.hero-target {
+  width: 100%;
+  height: 500px; /* Ajusta la altura del hero */
+  background-image: url('https://carlotagf.github.io/PagWebCarlota/imagenes/hero-control.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-target::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.3); /* Opcional para texto legible */
+  z-index:0;
+}
+
+.hero-target .hero-text {
+  position: relative;
+  z-index:1;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
 
 
