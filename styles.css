@@ -313,37 +313,7 @@ section {
     font-size: 12px;
     padding: 2px 5px;
 }
-.imagenfondo {
-  width: 100%;
-  height: 500px; /* Ajusta la altura del hero */
-  background-image: url('https://es.dreamstime.com/stock-de-ilustraci%C3%B3n-textura-incons%C3%BAtil-de-la-ropa-fondo-para-la-tienda-image62505760');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
 
-.imagenfondo::before {
-  content: "";
-  position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color: rgba(0,0,0,0.3); /* Opcional para texto legible */
-  z-index:0;
-}
-
-.imagenfondo .imagenfondo {
-  position: relative;
-  z-index:1;
-  color: white;
-  font-size: 3rem;
-  text-align: center;
-}
 
 
 
