@@ -321,11 +321,12 @@ html, body {
 }
 
 body {
-  background-image: url('https://es.dreamstime.com/stock-de-ilustraci%C3%B3n-textura-incons%C3%BAtil-de-la-ropa-fondo-para-la-tienda-image62505760'); /* Cambia por la URL de tu imagen */
+  background-image: url('https://unsplash.com/es/s/fotos/fondo-de-sitio-web'); /* Cambia por la URL de tu imagen */
   background-repeat: no-repeat; /* evita que se repita */
   background-position: center center; /* centra la imagen */
   background-size: cover; /* hace que cubra toda la pantalla */
 }
+
 
 
 
