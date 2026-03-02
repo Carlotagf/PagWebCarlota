@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         //  Actualiza directamente
         adobe.target.getOffer({
-          mbox: "experience-mbox", // ⚠️ Reemplaza con el mbox que usas para tu A/B
+          mbox: "experience-mbox", 
           success: function(offer) {
             adobe.target.applyOffer({ mbox: "experience-mbox", offer: offer });
             console.log("Experiencia B aplicada inmediatamente");
@@ -156,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </body>
 
 </html>
+
 
 
 
