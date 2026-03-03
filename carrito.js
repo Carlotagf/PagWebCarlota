@@ -6,12 +6,9 @@ function agregarAlCarrito(nombre, precio) {
     total += precio;
     mostrarCarrito();
 
-    adobe.target.trackEvent({
-        mbox: "actualizar-perfil",
-        params: {
-            "profile.numCompras": "true"
+    
     }
-    });
+    
     
 
 
