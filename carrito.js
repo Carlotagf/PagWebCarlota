@@ -14,7 +14,7 @@ function agregarAlCarrito(nombre, precio) {
         error: function(status, error) { console.error("Error TrackEvent", status, error); }
     });
 } else {
-    console.warn("at.js no está listo aún");
+    console.warn("Error at.js");
 }
 }*/
 
