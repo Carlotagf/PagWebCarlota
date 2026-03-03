@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
           params: { purchase: "true" }
         });
 
-        console.log("Usuario marcado como comprador en Adobe Target");
+        console.log("Comprador en Target");
 
         //  Actualiza directamente
         adobe.target.getOffer({
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Experiencia B aplicada inmediatamente");
           },
           error: function(status, error) {
-            console.error("Error aplicando experiencia B:", status, error);
+            console.error("Experiencia B:", status, error);
           }
         });
       }
@@ -156,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </body>
 
 </html>
+
 
 
 
