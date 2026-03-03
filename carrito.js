@@ -35,3 +35,5 @@ function vaciarCarrito() {
     total = 0;
     mostrarCarrito();
 }
+}
+
