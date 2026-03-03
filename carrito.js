@@ -7,14 +7,11 @@ function agregarAlCarrito(nombre, precio) {
     mostrarCarrito();
 
     adobe.target.trackEvent({
-        mbox: "purchase-confirmation",
+        mbox: "actualizar-perfil",
         params: {
-            numCompras: true
-        }
-    });
-
-    console.log("Enviado a Target");
+            "profile.numCompras": "true"
     }
+    });
     
 
 
