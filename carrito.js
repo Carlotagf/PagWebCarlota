@@ -6,8 +6,16 @@ function agregarAlCarrito(nombre, precio) {
     total += precio;
     mostrarCarrito();
 
-    user.set('numCompras', true);
+    adobe.target.trackEvent({
+        mbox: "purchase-confirmation",
+        params: {
+            numCompras: true
+        }
+    });
+
+    console.log("Enviado a Target");
     }
+    
 
 
 function mostrarCarrito() {
