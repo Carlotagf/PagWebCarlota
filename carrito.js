@@ -6,18 +6,7 @@ function agregarAlCarrito(nombre, precio) {
     total += precio;
     mostrarCarrito();
 
-    /*
-    if (window.adobe && adobe.target && adobe.target.trackEvent) {
-        adobe.target.trackEvent({
-            mbox: "numcompras",
-            params: { purchase: "true" },
-            success: function() { console.log("TrackEvent enviado"); },
-            error: function(status, error) { console.error("Error TrackEvent", status, error); }
-        });
-    } else {
-        console.warn("Error at.js");
-    }
-    */
+    user.set('numCompras', true);
     }
 
 
