@@ -6,7 +6,7 @@ function agregarAlCarrito(nombre, precio) {
     total += precio;
     mostrarCarrito();
 
-    /*
+/*
     if (window.adobe && adobe.target && adobe.target.trackEvent) {
         adobe.target.trackEvent({
             mbox: "numcompras",
