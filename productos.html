@@ -117,45 +117,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script src="carrito.js"></script>
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-
-  // Selecciona todos los botones de compra
-  var botones = document.querySelectorAll(".btn-comprar");
-
-  botones.forEach(function(boton) {
-    boton.addEventListener("click", function() {
-
-      // Marca al usuario como comprador en Target
-      if (typeof adobe !== "undefined" && adobe.target) {
-        adobe.target.trackEvent({
-          mbox: "purchase-confirmation",
-          params: { purchase: "true" }
-        });
-
-        console.log("Comprador en Target");
-
-        //  Actualiza directamente
-        adobe.target.getOffer({
-          mbox: "experience-mbox", 
-          success: function(offer) {
-            adobe.target.applyOffer({ mbox: "experience-mbox", offer: offer });
-            console.log("Experiencia B aplicada inmediatamente");
-          },
-          error: function(status, error) {
-            console.error("Experiencia B:", status, error);
-          }
-        });
-      }
-
-    });
-  });
-
-});
-</script>
+    
 </body>
 
 </html>
+
 
 
 
