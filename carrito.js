@@ -6,7 +6,7 @@ function agregarAlCarrito(nombre, precio) {
     total += precio;
     mostrarCarrito();
 
-      if (window.adobe && adobe.target && adobe.target.trackEvent) {
+      /*if (window.adobe && adobe.target && adobe.target.trackEvent) {
     adobe.target.trackEvent({
         mbox: "numcompras",
         params: { purchase: "true" },
@@ -16,7 +16,7 @@ function agregarAlCarrito(nombre, precio) {
 } else {
     console.warn("at.js no está listo aún");
 }
-}
+}*/
 
 function mostrarCarrito() {
     const lista = document.getElementById("lista-carrito");
