@@ -5,7 +5,10 @@ function agregarAlCarrito(nombre, precio) {
     carrito.push({ nombre, precio });
     total += precio;
     mostrarCarrito();
-}
+    localStorage.setItem("userPurchased", "true");
+
+  }
+
 
 function mostrarCarrito() {
     const lista = document.getElementById("lista-carrito");
@@ -27,5 +30,6 @@ function vaciarCarrito() {
     total = 0;
     mostrarCarrito();
 }
+
 
 
