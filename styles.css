@@ -31,7 +31,7 @@ body::before {
 .container {
     width: 100%;
     min-height: 100vh;
-    background-color: transparent; /* transparente para ver fondo */
+    background-color: transparent;
     color: white;
 }
 
@@ -88,7 +88,7 @@ header {
 }
 
 .sobre-nosotros .bloque {
-    background: rgba(255, 255, 255, 0.15); /* casi transparente */
+    background: rgba(255, 255, 255, 0.15); 
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -108,15 +108,15 @@ header {
 }
 
 .sobre-nosotros {
-    font-size: 20px; /* Tamaño base del texto más grande */
+    font-size: 20px; 
 }
 
 .sobre-nosotros h1 {
-    font-size: 36px; /* Tamaño grande para el título principal */
+    font-size: 36px;
 }
 
 .sobre-nosotros h2 {
-    font-size: 24px; /* Tamaño para los subtítulos */
+    font-size: 24px; 
 }
 
 //productos
@@ -128,20 +128,20 @@ section {
 
 .productos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 30px;
 }
 
 .producto {
-    background-color: rgba(215, 215, 215, 0.8); /* blanco semi-transparente */
+    background-color: rgba(215, 215, 215, 0.8); 
     padding: 15px;
     border-radius: 8px;
     text-align: center;
 }
 
 .producto img {
-    width: 100%;      /* Ocupa todo el ancho del contenedor */
-    height: auto;     /* Mantiene la proporción original */
+    width: 100%;      
+    height: auto;     
     border-radius: 5px;
 }
 
@@ -239,7 +239,7 @@ section {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    position: relative; /* necesario para el desplegable */
+    position: relative; 
 }
 
 .carrito-top span {
@@ -328,5 +328,6 @@ section h2 {
 .equipo {
     margin-bottom: 40px;
 }
+
 
 
