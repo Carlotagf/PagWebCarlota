@@ -7,11 +7,13 @@ function agregarAlCarrito(nombre, precio) {
     mostrarCarrito();
 
     let comprasAnteriores = parseInt(localStorage.getItem("userPurchased")) || 0;
-    comprasAnteriores += 1;
-    localStorage.setItem("userPurchased", comprasAnteriores);
-    
 
-  }
+    if (mbox.param('purchase') === 'true') {
+        comprasAnteriores += 1;
+        localStorage.setItem("userPurchased", comprasAnteriores);
+    }
+
+}
 
 
 function mostrarCarrito() {
