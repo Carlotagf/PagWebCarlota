@@ -5,7 +5,11 @@ function agregarAlCarrito(nombre, precio) {
     carrito.push({ nombre, precio });
     total += precio;
     mostrarCarrito();
-    localStorage.setItem("userPurchased", "true");
+
+    let comprasAnteriores = parseInt(localStorage.getItem("userPurchased")) || 0;
+    comprasAnteriores += 1;
+    localStorage.setItem("userPurchased", comprasAnteriores);
+    
 
   }
 
