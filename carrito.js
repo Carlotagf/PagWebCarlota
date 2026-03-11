@@ -6,12 +6,11 @@ function agregarAlCarrito(nombre, precio) {
     total += precio;
     mostrarCarrito();
 
+    
     let comprasAnteriores = parseInt(localStorage.getItem("userPurchased")) || 0;
-
-    if (mbox.param('purchase') === 'true') {
-        comprasAnteriores += 1;
-        localStorage.setItem("userPurchased", comprasAnteriores);
-    }
+    comprasAnteriores += 1;
+    localStorage.setItem("userPurchased", comprasAnteriores);
+    console.log("Total de compras del usuario:", comprasAnteriores);
 
 }
 
@@ -36,6 +35,7 @@ function vaciarCarrito() {
     total = 0;
     mostrarCarrito();
 }
+
 
 
 
