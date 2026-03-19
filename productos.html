@@ -52,7 +52,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="producto">
                 <img src="https://tse2.mm.bing.net/th/id/OIP.cSErv-qGBO7hYuseZSiY0AHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Camiseta">
                 <h3>Camiseta Básica</h3>
+                <div class="precio-oferta">
                 <p class="precio" data-precio="15">15 €</p>
+                </div>
                 <button class="btn-comprar" onclick="agregarAlCarrito('Camiseta Básica', 15)">Comprar</button>
             </div>
 
@@ -66,7 +68,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="producto">
                 <img src="https://s3.ppllstatics.com/mujerhoy/www/multimedia/202503/25/media/cortadas/chaqueta-cuero-zara-kMyB--650x900@MujerHoy.jpg" alt="Chaqueta">
                 <h3>Chaqueta</h3>
+                <div class="precio-oferta">
                 <p class="precio" data-precio="45">45 €</p>
+                </div>
                 <button class="btn-comprar" onclick="agregarAlCarrito('Chaqueta', 45)">Comprar</button>
             </div>
 
@@ -80,7 +84,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="producto">
                 <img src="https://tse4.mm.bing.net/th/id/OIP.-MILPC_ExPONQfoOwFcs0wHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Vestido">
                 <h3>Vestido</h3>
+                <div class="precio-oferta"></div>
                 <p class="precio" data-precio="40">40 €</p>
+                </div>
                 <button class="btn-comprar" onclick="agregarAlCarrito('Vestido', 40)">Comprar</button>
             </div>
 
@@ -101,7 +107,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="producto">
                 <img src="https://graziamagazine.com/es/wp-content/uploads/sites/12/2024/12/5-e1733315378373.jpg" alt="Abrigo">
                 <h3>Abrigo</h3>
+                 <div class="precio-oferta">
                 <p class="precio" data-precio="60">60 €</p>
+                </div>
                 <button class="btn-comprar" onclick="agregarAlCarrito('Abrigo', 60)">Comprar</button>
             </div>
 
@@ -122,21 +130,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="carrito.js"></script>
 
 <script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const descuento = parseFloat(urlParams.get('descuento')) || 0;
+const urlParams = new URLSearchParams(window.location.search);
+const descuento = parseFloat(urlParams.get('descuento')) || 0;
 
-  if (descuento > 0) {
-    const precios = document.querySelectorAll('.precio');
+if (descuento > 0) {
+    const productos = document.querySelectorAll('.producto');
 
-    precios.forEach(precioElem => {
-      const precioOriginal = parseFloat(precioElem.dataset.precio);
-      const nuevoPrecio = (precioOriginal * (1 - descuento / 100)).toFixed(2);
+    productos.forEach(productoDiv => {
+        const precioElem = productoDiv.querySelector('.precio');
+        const precioOriginal = parseFloat(precioElem.dataset.precio);
 
-     
-      precioElem.innerHTML = `<span style="text-decoration: line-through;">${precioOriginal} €</span> <span style="color:red; font-weight:bold;">${nuevoPrecio} €</span>`;
-      precioElem.dataset.precio = nuevoPrecio;
+        
+        const nuevoPrecio = (precioOriginal * (1 - descuento / 100)).toFixed(2);
+
+        
+        precioElem.innerHTML = `
+            <span style="text-decoration: line-through; margin-right:5px; font-size:16px;">${precioOriginal} €</span>
+            <span style="color:orange; font-weight:bold; font-size:24px;">${nuevoPrecio} €</span>
+        `;
+
+       
+        precioElem.dataset.precio = nuevoPrecio;
     });
-  }
+}
 </script>
 </body>
     
