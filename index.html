@@ -12,7 +12,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     <meta charset="UTF-8">
     <title>Inicio | Tienda de Ropa</title>
-    <meta http-equiv="refresh" content="0; url=productos.html">
+    
+    <script>
+      if (!sessionStorage.getItem("redirigido")) {
+        sessionStorage.setItem("redirigido", "true");
+        window.location.href = "productos.html";
+      }
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
     <!-- <script src="at.js"></script> -->
     <!-- <script src="https://valuelabspaemeapartn.tt.omtrdc.net/at.js"></script> -->
