@@ -313,5 +313,26 @@ section h2 {
 }
 
 
+.precio-oferta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: 5px;
+}
+
+
+.precio-oferta .precio-original {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: #777;
+}
+
+
+.precio-oferta .precio-descuento {
+  font-size: 22px;
+  font-weight: bold;
+  color: orange;
+}
+
 
 
