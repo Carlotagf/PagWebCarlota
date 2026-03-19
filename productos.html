@@ -134,6 +134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
      
       precioElem.innerHTML = `<span style="text-decoration: line-through;">${precioOriginal} €</span> <span style="color:red; font-weight:bold;">${nuevoPrecio} €</span>`;
+      precioElem.dataset.precio = nuevoPrecio;
     });
   }
 </script>
