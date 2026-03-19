@@ -37,5 +37,15 @@ function vaciarCarrito() {
 }
 
 
+window.onload = function() {
+    const carritoGuardado = JSON.parse(localStorage.getItem("carrito"));
+    const totalGuardado = parseFloat(localStorage.getItem("total"));
+
+    if (carritoGuardado && totalGuardado) {
+        carrito = carritoGuardado;
+        total = totalGuardado;
+        mostrarCarrito();
+    }
+};
 
 
