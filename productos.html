@@ -134,23 +134,20 @@ const urlParams = new URLSearchParams(window.location.search);
 const descuento = parseFloat(urlParams.get('descuento')) || 0;
 
 if (descuento > 0) {
-    const productos = document.querySelectorAll('.producto');
+    document.querySelectorAll('.producto').forEach(producto => {
+        const originalElem = producto.querySelector('.precio-original');
+        const descuentoElem = producto.querySelector('.precio-descuento');
 
-    productos.forEach(productoDiv => {
-        const precioElem = productoDiv.querySelector('.precio');
-        const precioOriginal = parseFloat(precioElem.dataset.precio);
+        if (!originalElem || !descuentoElem) return;
 
-        
+        const precioOriginal = parseFloat(originalElem.dataset.precio);
         const nuevoPrecio = (precioOriginal * (1 - descuento / 100)).toFixed(2);
 
         
-        precioElem.innerHTML = `
-            <span style="text-decoration: line-through; margin-right:5px; font-size:16px;">${precioOriginal} €</span>
-            <span style="color:orange; font-weight:bold; font-size:24px;">${nuevoPrecio} €</span>
-        `;
+        descuentoElem.textContent = `${nuevoPrecio} €`;
 
-       
-        precioElem.dataset.precio = nuevoPrecio;
+        
+        originalElem.dataset.precio = nuevoPrecio;
     });
 }
 </script>
