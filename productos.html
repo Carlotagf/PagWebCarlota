@@ -140,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 
 const urlParams = new URLSearchParams(window.location.search);
-const descuento = parseFloat(urlParams.get('descuento')) || 20;
+const descuento = parseFloat(urlParams.get('descuento')) || 0;
 
 document.querySelectorAll('.producto').forEach(producto => {
     const precioElem = producto.querySelector('.precio');
