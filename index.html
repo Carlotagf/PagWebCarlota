@@ -14,12 +14,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <title>Inicio | Tienda de Ropa</title>
     
     <script>
-      if (!sessionStorage.getItem("redirigido")) {
-        sessionStorage.setItem("redirigido", "true");
-        window.location.href = "productos.html";
-      }
+        if (window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
+            if (!sessionStorage.getItem("redirigido")) {
+                sessionStorage.setItem("redirigido", "true");
+                window.location.href = "productos.html";
+            }
+        }
     </script>
-    
+
     <link rel="stylesheet" href="styles.css">
     <!-- <script src="at.js"></script> -->
     <!-- <script src="https://valuelabspaemeapartn.tt.omtrdc.net/at.js"></script> -->
