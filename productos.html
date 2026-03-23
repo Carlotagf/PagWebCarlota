@@ -135,27 +135,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 
-// Cambia descuentos
+//  Cambia descuentos
 const urlParams = new URLSearchParams(window.location.search);
 const descuento = parseFloat(urlParams.get('descuento')) || 10;
 
 document.querySelectorAll('.producto').forEach(producto => {
-    const precioElem = producto.querySelector('.precio');
-    const precioOriginal = parseFloat(precioElem.dataset.precio);
-    const nuevoPrecio = (precioOriginal * (1 - descuento / 100)).toFixed(2);
+const precioElem = producto.querySelector('.precio');
+const precioOriginal = parseFloat(precioElem.dataset.precio);
+const nuevoPrecio = (precioOriginal * (1 - descuento / 100)).toFixed(2);
 
     
-    precioElem.innerHTML = `
-        <span style="text-decoration: line-through; font-size:16px; display:block; text-align:center;">${precioOriginal} €</span>
-        <span style="color:orange; font-weight:bold; font-size:30px; display:block; text-align:center;">${nuevoPrecio} €</span>
-    `;
-    
-    precioElem.dataset.precio = nuevoPrecio;
+precioElem.innerHTML = `
+    <span style="text-decoration: line-through; font-size:16px; display:block; text-align:center;">${precioOriginal} €</span>
+     <span style="color:orange; font-weight:bold; font-size:30px; display:block; text-align:center;">${nuevoPrecio} €</span>
+`;
+
+precioElem.dataset.precio = nuevoPrecio;
 
     
-    const boton = producto.querySelector('.btn-comprar');
-    const nombreProducto = producto.querySelector('h3').textContent;
-    boton.onclick = () => agregarAlCarrito(nombreProducto, parseFloat(nuevoPrecio));
+const boton = producto.querySelector('.btn-comprar');
+const nombreProducto = producto.querySelector('h3').textContent;
+boton.onclick = () => agregarAlCarrito(nombreProducto, parseFloat(nuevoPrecio));
 });
 </script>
 
