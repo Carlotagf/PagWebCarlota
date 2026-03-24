@@ -1,3 +1,26 @@
+(function() {
+    var key = "popup_shown_count";
+    var maxShows = 3;
+
+    var count = localStorage.getItem(key);
+
+    if (!count) {
+        count = 0;
+    } else {
+        count = parseInt(count, 10);
+    }
+
+    if (count >= maxShows) {
+        window.targetPageParams = function() {
+            return {
+                "popupBlocked": true
+            };
+        };
+    } else {
+        localStorage.setItem(key, count + 1);
+    }
+})();
+
 let carrito = []; 
 let total = 0;
 
