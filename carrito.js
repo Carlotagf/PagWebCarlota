@@ -1,27 +1,3 @@
-(function() {
-    var key = "popup_shown_count";
-    var maxShows = 3;
-
-    var count = localStorage.getItem(key);
-
-    if (!count) {
-        count = 0;
-    } else {
-        count = parseInt(count, 10);
-    }
-
-    
-    window.targetPageParams = function() {
-        return {
-            "popupCount": count
-        };
-    };
-
-    if (count < maxShows) {
-        localStorage.setItem(key, count + 1);
-    }
-})();
-
 let carrito = []; 
 let total = 0;
 
