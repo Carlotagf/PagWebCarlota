@@ -10,13 +10,14 @@
         count = parseInt(count, 10);
     }
 
-    if (count >= maxShows) {
-        window.targetPageParams = function() {
-            return {
-                "popupBlocked": true
-            };
+    
+    window.targetPageParams = function() {
+        return {
+            "popupCount": count
         };
-    } else {
+    };
+
+    if (count < maxShows) {
         localStorage.setItem(key, count + 1);
     }
 })();
